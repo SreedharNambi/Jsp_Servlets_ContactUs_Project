@@ -63,7 +63,7 @@ width:20vw;}
 		
 		<form class='contact-card' action="contactus" method='post'>
 		<label for='user'>Name <span>*</span><input id='user' type=text required name='user'></label><br>
-		<label for='email'>E-mail <span>*</span><input id='email' type=text required name='email'></label>
+		<label for='email'>E-mail <span>*</span><input id='email' type=email required name='email'></label>
 		<span id='email-tagline'>example@example.com</span><br>
 		<label for='message'>Message <span>*</span><textarea id='message' required name='message'></textarea></label>
 		

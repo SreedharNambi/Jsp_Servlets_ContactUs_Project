@@ -1,23 +1,23 @@
-package com.myproject;
+package com.pojoclass;
 
 public class Request {
 
-	public Integer id;
+	private Integer id;
 
-	public String name;
+	private String name;
 
-	public String email;
+	private String email;
 
-	public String message;
+	private String message;
 
-	public String status;
+	private String isActive;
 
-	public String getStatus() {
-		return status;
+	public String getIsActive() {
+		return isActive;
 	}
 
-	public void setStatus(String status) {
-		this.status = status;
+	public void setIsActive(String status) {
+		this.isActive = status;
 	}
 
 	public String getName() {

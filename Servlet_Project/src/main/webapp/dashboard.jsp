@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	isELIgnored="false" pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +17,8 @@
 				<th>Name</th>
 				<th>Email</th>
 				<th>Message</th>
-				<th>Status</th>
+				<th>IsActive</th>
+				<th>Archive</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -27,17 +28,18 @@
 					<td><c:out value="${data.name}" /></td>
 					<td><c:out value="${data.email}" /></td>
 					<td><c:out value="${data.message}" /></td>
-					<td><c:out value="${data.status}" /></td>
+					<td><c:out value="${data.isActive}" /></td>
 					<td><form action='dashboard' method='post'>
-							<button name='btn' value="${data.id}">Archieve</button>
+							<button name='button' value="${data.id}">Archive</button>
 						</form></td>
-
 				</tr>
 			</c:forEach>
 		</tbody>
 	</table>
+	
+	
 
-	<h1>Archieved User Requests</h1>
+	<h1>Archived User Requests</h1>
 	<table border="1">
 		<thead>
 			<tr>
@@ -45,18 +47,17 @@
 				<th>Name</th>
 				<th>Email</th>
 				<th>Message</th>
-				<th>Status</th>
+				<th>IsActive</th>
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach var="data" items="${archievedUserRequests}">
+			<c:forEach var="data" items="${archivedUserRequests}">
 				<tr>
 					<td><c:out value="${data.id}" /></td>
 					<td><c:out value="${data.name}" /></td>
 					<td><c:out value="${data.email}" /></td>
 					<td><c:out value="${data.message}" /></td>
-					<td><c:out value="${data.status}" /></td>
-
+					<td><c:out value="${data.isActive}" /></td>
 				</tr>
 			</c:forEach>
 		</tbody>

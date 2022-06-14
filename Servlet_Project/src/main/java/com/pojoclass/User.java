@@ -1,10 +1,10 @@
-package com.myproject;
+package com.pojoclass;
 
 public class User {
 
-	public String username;
+	private String username;
 
-	public String password;
+	private String password;
 
 	public String getUsername() {
 		return username;
